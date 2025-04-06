@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Chicle", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px;
+    color: whitesmoke
+}
+
+#copytext {
+    position: absolute;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 2px;
+    bottom: 0;
+    right: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 70);
+}
