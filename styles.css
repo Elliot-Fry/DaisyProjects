@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Chicle", serif;
+    font-family: "Chicle";
     font-weight: 400;
     font-style: normal;
     letter-spacing: 3px; 
     overflow: hidden;
+    color: whitesmoke;
 }
 
 .chicle-regular {
@@ -26,20 +27,21 @@ body {
 }
 
 @keyframes twillight {
-    0% {background-color: #6666ff;}
+    0% {background-color: #7272ff;}
     /* 50% {background-color: #FFB226;} */
-    100% {background-color: #9933ff;}
+    100% {background-color: #8340ff;}
+
 }
 #backdrop{
     position: absolute;
     z-index: 0;
-    background-color: #6666ff;
+    background-color: #7272ff;
     height: 100vh;
     width: 100%;
 }
 
 #linkBox {
-    width: 300px;
+    width: 400px;
     /* border: black solid; */
     display: flex;
     flex-direction: column;
@@ -48,14 +50,9 @@ body {
     z-index: 2;
 }
 
-#toggle:checked ~ #backdrop{
-    animation-name: twillight;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-timing-function: linear;
-}
 
 .link {
+    font-family: 'Chicle';
     margin: 10px auto;
     width: 200px;
     /* border: 1px dashed black; */
@@ -66,58 +63,100 @@ body {
     z-index: 11;
 }
 
-#about{
-    padding-right: 280px;
-}
-
 #contact{
     padding-left: 60px;
 }
 
 #projectsBox {
     width: 200px;
-    height: 40px;
+    max-height: 40px;
     /* border: 1px dashed black; */
     display: flex;
     flex-direction: column;
-    transition: opacity 0.3s ease-in-out, height 0.5s ease-in-out;
+    /* align-content: center; */
+    /* ^^Algin-content not needed? */
+    transition: opacity 0.4s ease-in-out, max-height 0.5s ease-in-out;
     overflow: hidden;
     z-index: 10;
 }
 
 .hiddenLink {
+    font-family: 'Anaheim';
+    font-size: 20px;
+    font-weight: 500;
+
     opacity: 0;
-    height: 0;
+    max-height: 0;
     margin: 10px auto;
     padding-left: 20px;
-    width: 200px;
-    color: whitesmoke;
+    width: 100%;
+    /* ^^ Changing width to 100% will keep left justified, otherwise remove left padding = centered */
     /* border: 1px dashed black; */
     overflow: hidden;
     text-decoration: none;
-    transition: opacity 0.2s ease-in-out, height 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out, max-height 0.3s ease-in-out;
     z-index: 11;
 }
 
-#toggle{
+#project1{
+    margin-top: 12px;
+}
+
+.info{
+    font-family: "Anaheim";
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    opacity: 0;
+    max-height: 0;
+    margin: 0px auto;
+    padding-left: 20px;
+    width: 400px;
+    /* color: rgb(0, 2, 102); */
+    /* border: 1px dashed black; */
+    overflow: hidden;
+    /* transition: opacity 0.6s ease-in-out, height 0.9 ease-in-out; */
+    z-index: 11;
+    /* max-height: 0; */
+    transition: opacity 0.4s ease-in-out, max-height 0.6s ease-in-out;
+}
+
+input{
     display: none;
     position: absolute;
     z-index: 5;
 }
 
-#toggle:checked ~ #linkBox #projectsBox{
-    height: 200px;
+input:checked ~ #backdrop{
+    animation-name: twillight;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
 }
 
-#toggle:checked ~ #linkBox .hiddenLink{
+#aboutToggle:checked ~ 
+#linkBox .info{
     opacity: 1;
-    height: 44px;
+    max-height: 200px;
     overflow: visible;
+}
+
+#projectsToggle:checked ~ 
+#linkBox #projectsBox{
+    max-height: 200px;
+}
+
+/* #projectsToggle:checked ~  */
+#linkBox .hiddenLink{
+    opacity: 1;
+    max-height: 20px;
+    overflow: visible;
+    /* padding-top: 4px; */
 }
 
 .hiddenLink:hover,
 .link:hover {
-    color: black;
+    color: rgb(0, 2, 102);
 }
 
 @keyframes drift {
