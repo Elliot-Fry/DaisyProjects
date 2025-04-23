@@ -16,11 +16,15 @@
     font-style: normal;
     letter-spacing: 3px;
   }
-  
+
+  html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
 body {
     /* background-color: skyblue; */
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -406,6 +410,6 @@ input:checked ~ #backdrop{
     font-size: 10px;
     letter-spacing: 1px;
     padding: 2px;
-    bottom: 0;
-    right: 0;
+    bottom: -0;
+    right: -10;
 }
