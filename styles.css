@@ -8,6 +8,7 @@
     letter-spacing: 3px; 
     overflow: hidden;
     color: whitesmoke;
+    /* border: 1px dashed black; */
 }
 
 .chicle-regular {
@@ -65,15 +66,18 @@ body {
     color: whitesmoke;
     font-size: 30px;
     text-decoration: none;
+    text-decoration-color: rgb(166, 196, 231);
     transition: all 0.2s ease-in-out;
     z-index: 11;
 }
 
 #aboutBox{
+    max-width: 400px;
+    min-width: 200px;
     /* border: 1px dashed black; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow: visible;
     z-index: 10;
@@ -93,15 +97,20 @@ body {
     opacity: 0;
     max-height: 0;
     margin: 0px auto;
-    padding-left: 20px;
-    width: 400px;
-    /* color: rgb(0, 2, 102); */
-    /* background-color: #8340ff; */
+    width: 100%;
     /* border: 1px dashed black; */
-    border-radius: 10px;
-    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
     z-index: 11;
-    transition: opacity 0.4s ease-in-out, max-height 0.6s ease-in-out;
+    overflow: visible;
+}
+
+#whoami{
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
 }
 
 #projectsBox {
@@ -118,15 +127,14 @@ body {
 .hiddenLink {
     font-family: 'Anaheim';
     font-size: 20px;
-    font-weight: 500;
-
+    font-weight: 500;    
+    /* border: 1px dashed black; */
     opacity: 0;
     max-height: 0;
     margin: 10px auto;
     padding-left: 20px;
     width: 100%;
     /* ^^ Changing width to 100% will keep left justified, otherwise remove left padding = centered */
-    /* border: 1px dashed black; */
     overflow: hidden;
     text-decoration: none;
     transition: opacity 0.2s ease-in-out, max-height 0.5s ease-in-out;
@@ -160,7 +168,6 @@ input:checked ~ #backdrop{
 #projectsToggle:checked ~ 
 #linkBox #projectsBox{
     max-height: 200px;
-    /* color: rgb(0, 2, 102); */
 }
 
 #projectsToggle:checked ~ 
@@ -170,10 +177,21 @@ input:checked ~ #backdrop{
     overflow: visible;
     /* padding-top: 4px; */
 }
+@media (pointer: fine) {
+    .hiddenLink:hover,
+    .link:hover {
+        color: rgb(0, 2, 102);
+        text-decoration-color: rgb(0, 2, 102);
+    }
+}
 
-.hiddenLink:hover,
-.link:hover {
-    color: rgb(0, 2, 102);
+@media (pointer: coarse) {
+    #aboutToggle:checked ~ #linkBox #aboutText{
+        color: rgb(0, 2, 102);
+    }
+    #projectsToggle:checked ~ #linkBox #projectsBox{
+        color: rgb(0, 2, 102);
+    }
 }
 
 /* 
@@ -410,6 +428,6 @@ input:checked ~ #backdrop{
     font-size: 10px;
     letter-spacing: 1px;
     padding: 2px;
-    bottom: -0;
-    right: -10;
+    bottom: 0;
+    right: 0;
 }
