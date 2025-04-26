@@ -11,14 +11,7 @@
     /* border: 1px dashed black; */
 }
 
-.chicle-regular {
-    font-family: "Chicle", serif;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 3px;
-  }
-
-  html, body{
+html, body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -38,7 +31,7 @@ body {
 
 }
 #backdrop{
-    position: absolute;
+    position: fixed;
     z-index: 0;
     background-color: #5c7aff;
     height: 100vh;
@@ -147,7 +140,7 @@ body {
 
 input{
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 5;
 }
 
@@ -223,7 +216,7 @@ input:checked ~ #backdrop{
 }
 
 .cloud {
-    position: absolute;
+    position: fixed;
     min-width: 50px;
     min-height: 25px;
     width: 10%;
@@ -505,7 +498,7 @@ input:checked ~ #backdrop{
 
 
 #copytext {
-    position: absolute;
+    position: fixed;
     color: aliceblue;
     font-size: 10px;
     letter-spacing: 1px;
