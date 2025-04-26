@@ -1,10 +1,10 @@
-// const div = document.querySelector(".link");
-// const body = document.body;
 
-// div.addEventListener("mouseenter", () => {
-//     body.style.backgroundColor = "navy";
-// });
+// const driftingThing = document.querySelector('.cloud');
 
-// div.addEventListener("mouseleave", () => {
-//     body.style.backgroundColor = "";
-// });
+// function restartAnimation() {
+//   driftingThing.style.animation = 'none';
+//   driftingThing.offsetHeight; // Force a reflow
+//   driftingThing.style.animation = '';
+// }
+
+// window.addEventListener('resize', restartAnimation);
