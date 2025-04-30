@@ -4,39 +4,52 @@
     box-sizing: border-box;
     font-family: "Anaheim";
     font-weight: 500;
+    font-size: 18px;
     font-style: normal;
-    /* letter-spacing: 3px;  */
+    /* letter-spacing: 1px;  */
     overflow-x: hidden;
     color: whitesmoke;
     /* border: 1px dashed black; */
 }
 
-/* html, body{
-    width: 100vw;
-    height: 100vh;
-} */
+.chicle{
+    font-family: "Chicle";
+    font-size: 36px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px; 
+}
 
 body {
+    background-color: rgb(0, 0, 50);
     /* display: flex; */
     /* justify-content: center; */
     /* align-items: center; */
 }
 
-#backgroundImg{
-    position: absolute;
-    height: 200vh;
-    /* min-height: 200vh; */
-    /* min-width: 100vw; */
-    z-index: 0;
+#fullscreenDemo {
+    position: fixed;
+    max-width: 100%;
+    max-height: 90%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
 }
 
-#box{
-    position: absolute;
-    background-color: rgb(0, 0, 70, 0.95);
-    width: 70%;
-    height: 200%;
-    left: 15%;
-    z-index: 10;
+#content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 20px;
+}
+
+#contentText {
+    bottom: 0;
+    max-width: 120vh;
+    margin: auto;
 }
 
 
